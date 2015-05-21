@@ -1,0 +1,27 @@
+{
+  "name": "magog",
+  "version": "0.0.0",
+  "description": "pseudo-webcomponents in pure js",
+  "main": "magog.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha ./spec/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/lucaswadedavis/magog.git"
+  },
+  "keywords": [
+    "pseudo-webcomponents"
+  ],
+  "author": "Lucas Wade Davis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucaswadedavis/magog/issues"
+  },
+  "dependencies": {
+    "rezi": "~1.0.0"
+  }
+}
