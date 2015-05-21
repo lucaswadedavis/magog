@@ -20,6 +20,10 @@
     }
   };
 
+  magog.click = function(selector, cb){
+    cb.apply(null,Array.prototype.slice.call(arguments,2) );
+  };
+
   if (typeof exports !== 'undefined') {
     if (typeof module !== 'undefined' && module.exports) {
       exports = module.exports = magog;

@@ -16,8 +16,18 @@ app.header = function(x){
   var template = "<h1 id='"+id+"'>"+(x||"Luke")+"</h1>";
   template += "<div>"+app.header.armageddon()+"</div>";
   var style = {};
-  style["#"+id] = {"background-color":"#f37",color:"#fff"};
+  style["#"+id] = {
+    "background-color":"#f37",
+    color:"#fff",
+    padding:"20px",
+    "text-align":"center",
+    cursor:"pointer"
+  };
   magog.style(style);
+
+  magog.click("#"+id,function(){
+    console.log("clicked");
+  });
 
   return template;
 };
