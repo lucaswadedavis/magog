@@ -13,7 +13,7 @@ var app = function(){
 
 app.header = function(x){
   var id = magog.id();
-  var template = "<h1 id='"+id+"'>"+(x||"Luke")+"</h1>";
+  var template = "<h1 onclick='magog.happenings."+id+"()' id='"+id+"'>"+(x||"Luke")+"</h1>";
   template += "<div>"+app.header.armageddon()+"</div>";
   var style = {};
   style["#"+id] = {
@@ -25,10 +25,10 @@ app.header = function(x){
   };
   magog.style(style);
 
-  magog.click("#"+id,function(){
-    console.log("clicked");
+  magog.happens(id,function(){
+    console.log("nfoe");
   });
-
+  
   return template;
 };
 

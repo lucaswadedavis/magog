@@ -20,8 +20,10 @@
     }
   };
 
-  magog.click = function(selector, cb){
-    cb.apply(null,Array.prototype.slice.call(arguments,2) );
+  magog.happenings = {};
+
+  magog.happens = function(id,cb){
+    this.happenings[id] = cb;
   };
 
   if (typeof exports !== 'undefined') {
