@@ -20,10 +20,10 @@
     }
   };
 
-  magog.happenings = {};
+  magog.eves = {};
 
-  magog.happens = function(id,cb){
-    this.happenings[id] = cb;
+  magog.eve = function(id,cb){
+    this.eves[id] = cb;
   };
 
   if (typeof exports !== 'undefined') {
