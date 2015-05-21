@@ -8,9 +8,10 @@
     document.body.innerHTML = template;
   };
 
-  magog._lastID = 0;
   magog.id = function(){
-    return "_"+this._lastID++;
+    var id = 0;
+    magog.id = function(){ return "_"+id++ ;};
+    return id++;
   };
 
   magog._css = {};
