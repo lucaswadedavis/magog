@@ -11,7 +11,7 @@
   magog.id = function(){
     var id = 0;
     magog.id = function(){ return "_"+id++ ;};
-    return id++;
+    return magog.id();
   };
 
   magog._css = {};

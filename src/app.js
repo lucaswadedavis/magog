@@ -67,11 +67,24 @@ app.table = function(x){
 };
 
 app.table.row = function(x){
+  var id = magog.id();
+
   var template = "";
   template += "<tr>";
   for (var i=0;i<x.length;i++){
-    template += "<td>"+x[i]+"</td>";
+    template += "<td onclick='magog.eves."+id+"()'>"+x[i]+"</td>";
   }
   template += "</tr>";
+ 
+  magog.eve(id,function(){
+    console.log("vlarg");
+  });
+
+  var style = {};
+  style["#"+id] = {
+    cursor:"pointer"
+  };
+  magog.style(style);
+  
   return template;
 };
