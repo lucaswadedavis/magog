@@ -1,6 +1,6 @@
 {
   "name": "magog",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "pseudo-webcomponents in pure js",
   "main": "magog.js",
   "directories": {
