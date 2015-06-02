@@ -5,6 +5,8 @@
   var magog = function(template){
     rezi(magog._css);
     magog._css = {};
+    magog.eves = magog.nextEves;
+    magog.nextEves = {};
     document.body.innerHTML = template;
   };
 
@@ -22,9 +24,10 @@
   };
 
   magog.eves = {};
+  magog.nextEves = {};
 
   magog.eve = function(id,cb){
-    this.eves[id] = cb;
+    this.nextEves[id] = cb;
   };
 
   if (typeof exports !== 'undefined') {
