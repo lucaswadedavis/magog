@@ -51,7 +51,7 @@ app.table = function(x){
 
   var template = "";
   template += "<table id='"+id+"'>";
-  for (var i=0;i<1000;i++){
+  for (var i=0;i<2500;i++){
     template += app.table.row([i,Math.random()]);
   }
   template += "</table>";
@@ -59,7 +59,8 @@ app.table = function(x){
   var style = {};
   style["#"+id] = {
     td:{border:"1px solid #333"},
-    width:"100%"
+    width:"100%",
+    tr:{cursor:"pointer"}
   };
   magog.style(style);
 
@@ -77,14 +78,9 @@ app.table.row = function(x){
   template += "</tr>";
  
   magog.eve(id,function(){
-    console.log("vlarg");
+    console.log("Node "+id+" clicked");
   });
 
-  var style = {};
-  style["#"+id] = {
-    cursor:"pointer"
-  };
-  magog.style(style);
   
   return template;
 };
